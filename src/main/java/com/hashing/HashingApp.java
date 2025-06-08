@@ -131,8 +131,6 @@ public class HashingApp extends javax.swing.JFrame {
     private void btnPBKDF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPBKDF2ActionPerformed
         try {
             String input;
-
-            // Cek apakah pengguna memilih file
             if (!txtFilePath.getText().isBlank()) {
                 input = readFileAsString(txtFilePath.getText());
             } else {
@@ -197,7 +195,7 @@ public class HashingApp extends javax.swing.JFrame {
             File selectedFile = fileChooser.getSelectedFile();
             txtFilePath.setText(selectedFile.getAbsolutePath());
             String fileContent = readFileAsString(selectedFile.getAbsolutePath());
-            txtInput.setText(fileContent); // Optional: masukkan isi file ke input
+            txtInput.setText(fileContent);
         }
     }//GEN-LAST:event_btnBrowseFileActionPerformed
 
